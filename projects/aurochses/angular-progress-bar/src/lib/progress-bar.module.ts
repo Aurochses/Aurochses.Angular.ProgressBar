@@ -12,4 +12,4 @@ import { ProgressBarComponent } from './progress-bar.component';
     ProgressBarComponent
   ]
 })
-export class AngularProgressBarModule { }
+export class ProgressBarModule { }
