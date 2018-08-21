@@ -16,6 +16,15 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@aurochses/angular-progress-bar": [
+        //"dist/aurochses/angular-progress-bar"
+        "projects/aurochses/angular-progress-bar/src/public_api.ts" 
+      ],
+      "@aurochses/angular-progress-bar/*": [
+        "dist/aurochses/angular-progress-bar/*"
+      ]
+    }
   }
 }

@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "@aurochses/angular-progress-bar": {
+      "root": "projects/aurochses/angular-progress-bar",
+      "sourceRoot": "projects/aurochses/angular-progress-bar/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/aurochses/angular-progress-bar/tsconfig.lib.json",
+            "project": "projects/aurochses/angular-progress-bar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/aurochses/angular-progress-bar/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/aurochses/angular-progress-bar/src/test.ts",
+            "tsConfig": "projects/aurochses/angular-progress-bar/tsconfig.spec.json",
+            "karmaConfig": "projects/aurochses/angular-progress-bar/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/aurochses/angular-progress-bar/tsconfig.lib.json",
+              "projects/aurochses/angular-progress-bar/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "demo"
